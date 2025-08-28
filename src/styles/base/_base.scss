@@ -1,0 +1,134 @@
+@use '../themes/theme' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+::selection {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+/* width */
+::-webkit-scrollbar {
+  // width: 0;
+  width: $size-lg;
+  height: $size-lg;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--on-primary);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "IBM Plex Mono", monospace;
+  // font-family: "Noto Sans", sans-serif;
+  color: var(--on-surface);
+  background-color: var(--surface);
+  line-height: 1.6;
+
+  position: relative;
+}
+
+body {
+  max-width: 768px;
+  padding: $size-8xl;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  gap: $space-8;
+}
+
+a {
+  text-decoration: none;
+  color: var(--on-surface-variant);
+  
+  &:hover {
+    color: var(--on-surface);
+  }
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+
+
+button {
+  padding: $space-2;
+
+  border-radius: $radius-sm;
+  border: 1px solid var(--on-surface);
+  color: var(--on-surface);
+  background-color: var(--surface);
+
+  &:hover {
+    cursor: pointer;
+    color: var(--surface);
+    background-color: var(--on-surface);
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--on-surface-variant);
+}
+
+.comment {
+  color: var(--on-surface-variant);
+}
+
+
+.background-image {
+  position: absolute;
+  // bottom: -20%;
+  bottom: 0;
+  right: 0;
+
+  opacity: 0.15;
+  // opacity: 0.25;
+  z-index: 0;
+  @include filter-on-surface-variant;
+  pointer-events: none;
+  user-select: none;
+}
+
+html[data-theme="dark"] .background-image {
+  @include filter-on-surface-variant-dark;
+}
+
+.icon {
+  $size: 30px;
+  width: $size;
+  height: $size;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}

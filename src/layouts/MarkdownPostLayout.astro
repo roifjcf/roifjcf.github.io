@@ -1,0 +1,18 @@
+---
+import '../styles/main.scss';
+
+import Navbar from "../components/Navbar.astro";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+<Layout>
+  <header>
+    <Navbar />
+  </header>
+  <main>
+    <h1>{frontmatter.title}</h1>
+    <p class="comment">{frontmatter.pubDate.toString().slice(0,10)}</p>
+    <slot />
+  </main>
+</Layout>

@@ -1,0 +1,38 @@
+@use '../themes/theme' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+
+  h1 {
+    color: var(--on-surface);
+    font-size: $font-size-base;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+}
+
+.navbar-container
+.icon {
+  @include filter-on-surface-variant;
+  &:hover {
+    @include filter-on-surface;
+  }
+}
+
+html[data-theme="dark"]
+.navbar-container
+.icon {
+  @include filter-on-surface-variant-dark;
+  &:hover {
+    @include filter-on-surface-dark;
+  }
+}

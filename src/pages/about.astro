@@ -1,0 +1,103 @@
+---
+
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+
+interface ProjectInterface {
+  name: string,
+  description: string,
+  repo?: string,
+  liveSite?: string,
+  imgSrc?: string,
+}
+
+interface SocialLinkInterface {
+  name: string,
+  url?: string,
+  imgSrc?: string,
+}
+
+const projects: ProjectInterface[] = [
+  {
+    "name": "recipile",
+    "description": "A full-stack app about recipe collection and management",
+    "repo": "https://github.com/roifjcf/recipile"
+  },
+  {
+    "name": "holo-fi",
+    "description": "A music player that plays chill lofi music produced by Hololive",
+    "repo": "https://github.com/roifjcf/holo-fi",
+    "liveSite": "https://roifjcf.github.io/holo-fi/"
+  }
+];
+
+const socialLinks: SocialLinkInterface[] = [
+  {
+    "name": "Github",
+    "url": "https://github.com/roifjcf"
+  }
+];
+
+---
+
+<Layout>
+  <header>
+    <Navbar />
+  </header>
+  <main class="about-container">
+    <section class="about-intro">
+      <p>I'm roifjcf -- a developer(maybe).</p>
+      <p>
+        There's no special meaning of my name,
+        it's just a random string with a length of seven (one of my favourite numbers).
+      </p>
+      <p>
+        I like building / creating stuff which can be visualized 
+        through different forms of media except writing (especially literary writing).
+      </p>
+      <p>
+        Programming is one of my ways to share my thoughts and feelings.
+      </p>
+      <p>
+        You may find my creative work elsewhere.
+      </p>
+      <p>When it comes to development, what I care about most is user experience.</p>
+    </section>
+    <section>
+      <h2>Social and contact</h2>
+      <ul>
+        {socialLinks.map(link =>
+        <li><a href={link["url"]} target="_blank">{link["name"]}</a></li> )}
+      </ul>
+
+    </section>
+    <section class="">
+      <h2>Projects</h2>
+      <div class="about-project-container">
+        {projects.map(project =>
+          <div class="about-project-item-container border-bottom">
+            <div class="top">
+              <div class="left">
+                <h3>{project["name"]}</h3>
+              </div>
+              <div class="right">
+                {project["repo"] && <a href={project["repo"]} target="_blank">Repository</a> }
+                {project["liveSite"] && <a href={project["liveSite"]} target="_blank">Live site</a> }
+              </div>
+            </div>
+            <div class="bottom">
+              <p>{project["description"]}</p>
+            </div>
+          </div>
+        )}
+      </div>
+
+
+    </section>
+
+    <section>
+
+    </section>
+
+  </main>
+</Layout>

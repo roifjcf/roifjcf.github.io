@@ -1,0 +1,27 @@
+---
+
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+---
+
+<Layout>
+  <header>
+    <Navbar />
+  </header>
+  <main>
+
+    <h2>Posts</h2>    
+    <ul>
+      {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
+
+    <h2>Tags</h2>
+    <ul>
+      {tags.map((tag) => (
+        <li><a href={`/tags/${tag}`}>{tag}</a></li>
+      ))}
+    </ul>
+  </main>
+</Layout>
