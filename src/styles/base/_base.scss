@@ -39,7 +39,7 @@ html,
 body {
   margin: 0;
   width: 100%;
-  // height: 100%;
+  // height: 100vh;
   font-family: "IBM Plex Mono", monospace;
   // font-family: "Noto Sans", sans-serif;
   color: var(--on-surface);
@@ -126,7 +126,7 @@ hr {
 
 
 .background-image {
-  position: absolute;
+  position: fixed;
   // bottom: -20%;
   bottom: 0;
   right: 0;
@@ -144,7 +144,7 @@ html[data-theme="dark"] .background-image {
 }
 
 .icon {
-  $size: 30px;
+  $size: 24px;
   width: $size;
   height: $size;
 
