@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "ed9b2c49b77cfe49",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "2755769ade0107a5",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "d41b7792cd2b2820",
+            "id": "8505263584bab8eb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/pages/posts/post-1.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "post-1"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4e73fb68e207ae83",
+    "id": "35b9410965edca99",
     "type": "split",
     "children": [
       {
-        "id": "a85b27e2f7c58fe6",
+        "id": "d2a2a9212fce6e29",
         "type": "tabs",
         "children": [
           {
-            "id": "23b4c72ad4c240c6",
+            "id": "0eb113da75bfde44",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,16 +44,26 @@
             }
           },
           {
-            "id": "cfeac52c380cae60",
+            "id": "dbbc1b517579d5c0",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "git-view"
+            }
+          },
+          {
+            "id": "a591ac7b78a442b1",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "resum",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
@@ -65,7 +71,7 @@
             }
           },
           {
-            "id": "7797dd1714bd0e5b",
+            "id": "3784af1378fb178a",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,19 +87,34 @@
     "width": 200
   },
   "right": {
-    "id": "0e22a35df83c0166",
+    "id": "7687bced25d75fa5",
     "type": "split",
     "children": [
       {
-        "id": "b7c9d91d5d006caf",
+        "id": "4f6bfb40e34164c0",
         "type": "tabs",
         "children": [
           {
-            "id": "a5916a5a13b3720a",
+            "id": "6770e1eda8aa8763",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "d6dd9828015b6039",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "✏️diary/🟡2025s3 text.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,24 +124,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 🟡2025s3 text"
             }
           },
           {
-            "id": "7305fad9b1fbe400",
+            "id": "c6e0775414ed4e29",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "📁dev/Resume.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Resume"
             }
           },
           {
-            "id": "41fc2330d233161a",
+            "id": "e66b18a049acd2db",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,39 +155,72 @@
               "icon": "lucide-tags",
               "title": "Tags"
             }
-          },
-          {
-            "id": "4dbe01b4c1a78058",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 221.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "obsidian-git:Open Git source control": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "d41b7792cd2b2820",
-  "lastOpenFiles": []
+  "active": "8505263584bab8eb",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "✏️diary/🟡2025s3 text.md",
+    "Home.md",
+    "📁life/📁good articles/wiwi/2025/追夢.md",
+    "📁acc/Developer.md",
+    "🎨art/Pasted image 20250831032840.png",
+    "🎨art/!images/📓Rei/Pasted image 20250829152519.png",
+    "🎨art/!images/📓Rei/Pasted image 20250829152028.png",
+    "🎨art/!images/📓Rei/Pasted image 20250829152010.png",
+    "🎨art/!images/📓Rei/Pasted image 20250829151933.png",
+    "✏️diary/Pasted image 20250831071352.png",
+    "✏️diary/!images/🟡2025s3 text/Pasted image 20250830033257.png",
+    "✏️diary/!images/🟡2025s3 img/Pasted image 20250831071223.png",
+    "✏️diary/!images/🟡2025s3 img/Pasted image 20250830090155.png",
+    "✏️diary/!images/🟡2025s3 img/Pasted image 20250828083240.png",
+    "📁acc/Main.md",
+    "📁acc/Illustration.md",
+    "📁acc/Game.md",
+    "📁dev/Resume.md",
+    "✏️diary/🟡2025s3 img.md",
+    "📁dev/📟astro/Blog.md",
+    "📁dev/🧐Design patterns.md",
+    "📁life/👾Game.md",
+    "📁dev/CLI commands.md",
+    "📁dev/📟HTML.md",
+    "📁dev/✨cool features/ui/Scroll bar.md",
+    "📁dev/📟angular/basic/Component.md",
+    "📁dev/git commit convention.md",
+    "📁dev/✨cool features/ui/Text select color.md",
+    "📁dev/📟angular/basic/Signal.md",
+    "2025-08-29.md",
+    "📁dev/✨cool features/ui/Dark mode.md",
+    "📁dev/📟angular/advanced/Service and dependency injection.md",
+    "📁dev/📟angular/basic/Loop.md",
+    "📁dev/📟angular/basic/Conditional render.md",
+    "📁dev/🧐Hydration.md",
+    "📁dev/📟astro",
+    "📁dev/✨templates",
+    "📁dev/📟angular/outline.base",
+    "📁dev/dev base.base",
+    "📁dev/📟typescript",
+    "📁dev/📟javascript",
+    "📁dev/📟angular/advanced",
+    "📁dev/📟angular/basic",
+    "📁dev/📟react",
+    "📁dev/📟angular"
+  ]
 }

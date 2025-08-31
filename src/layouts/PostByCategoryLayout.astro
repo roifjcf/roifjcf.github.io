@@ -1,0 +1,31 @@
+---
+import '../styles/main.scss';
+
+import Navbar from "../components/Navbar.astro";
+import Layout from "./Layout.astro";
+
+const { allPosts, tags } = Astro.props;
+
+---
+<Layout>
+  <header>
+    <Navbar />
+  </header>
+  <main class="postbycategorylayout-container">
+    <div>
+      <ul>
+        {allPosts.map((post: any) =>
+        <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+      </ul>
+    </div>
+
+    {tags.length > 0 &&
+    <div class="tags-container">
+      <h4>Tags</h4>
+      <ul>
+        {tags.map((tag: any) => (
+        <li><a href={`/tags/${tag}`}>{tag}</a></li>))}
+      </ul>
+    </div>}
+  </main>
+</Layout>

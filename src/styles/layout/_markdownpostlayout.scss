@@ -1,0 +1,9 @@
+@use '../themes/theme' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.markdownpostlayout-container {
+  h1 {
+    margin-top: -$space-2;
+  }
+}

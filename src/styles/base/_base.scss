@@ -34,11 +34,12 @@
   padding: 0;
 }
 
+
 html,
 body {
   margin: 0;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   font-family: "IBM Plex Mono", monospace;
   // font-family: "Noto Sans", sans-serif;
   color: var(--on-surface);
@@ -46,6 +47,10 @@ body {
   line-height: 1.6;
 
   position: relative;
+}
+
+html {
+  font-size: 14px;
 }
 
 body {
@@ -56,6 +61,14 @@ body {
   display: flex;
   flex-direction: row;
   gap: $space-8;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $size-6xl;
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: $size-4xl;
+    flex-direction: column;
+  }
 }
 
 a {
@@ -87,6 +100,21 @@ button {
     background-color: var(--on-surface);
   }
 }
+
+code {
+  padding: $space-1 $space-2;
+
+  border-radius: $radius-sm;
+  color: var(--on-surface);
+  background-color: var(--on-surface-container);
+}
+
+
+hr {
+  border-top: 1px solid var(--on-surface-container);
+}
+
+/* General classes */
 
 .border-bottom {
   border-bottom: 1px solid var(--on-surface-variant);

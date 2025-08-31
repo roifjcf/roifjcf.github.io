@@ -7,6 +7,12 @@
   flex-direction: column;
   gap: $space-8;
 
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   h1 {
     color: var(--on-surface);
     font-size: $font-size-base;
@@ -16,7 +22,20 @@
     display: flex;
     flex-direction: column;
     gap: $space-2;
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: row;
+      gap: $space-4;
+    }
   }
+
+  ul {
+    @media (max-width: $breakpoint-sm) {
+      display: flex;
+      flex-direction: row;
+      gap: $space-2;
+    }
+  }
+  
 
 }
 

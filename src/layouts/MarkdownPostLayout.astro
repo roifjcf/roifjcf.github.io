@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
   <header>
     <Navbar />
   </header>
-  <main>
+  <main class="markdownpostlayout-container">
     <h1>{frontmatter.title}</h1>
     <p class="comment">{frontmatter.pubDate.toString().slice(0,10)}</p>
     <slot />

@@ -1,1 +1,13 @@
-{}
+{
+  "cssTheme": "Flexoki",
+  "enabledCssSnippets": [
+    "hover resize",
+    "multiple tab rows",
+    "rounded corner highlight",
+    "Hiding the blank line above tables"
+  ],
+  "theme": "obsidian",
+  "accentColor": "#936c6e",
+  "textFontFamily": "",
+  "interfaceFontFamily": ""
+}

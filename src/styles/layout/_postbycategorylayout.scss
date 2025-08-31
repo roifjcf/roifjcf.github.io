@@ -1,0 +1,25 @@
+@use '../themes/theme' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.postbycategorylayout-container {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  
+  a {
+    color: var(--on-surface);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .tags-container {
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $space-4;
+    }
+  }
+}
