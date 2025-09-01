@@ -7,12 +7,12 @@
   flex-direction: column;
   gap: $space-4;
   
-  a {
-    color: var(--on-surface);
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+  // a {
+  //   color: var(--on-surface);
+  //   &:hover {
+  //     text-decoration: underline;
+  //   }
+  // }
 
   .tags-container {
     ul {

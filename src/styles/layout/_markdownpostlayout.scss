@@ -3,7 +3,57 @@
 @use '../abstracts/mixins' as *;
 
 .markdownpostlayout-container {
+  display: flex;
+  flex-direction: column;
+
+  section {
+    width: 100%;
+  }
+  
   h1 {
     margin-top: -$space-2;
   }
+
+  h2, h3 {
+    margin-top: $space-2;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .astro-code {
+    width: 100%;
+    margin: $space-2 0 $space-8;
+    padding: $space-4;
+    border-radius: $radius-md;
+
+    code {
+      all: unset;
+    }
+  }
+
+  ul, li {
+    list-style-type: disc;
+  }
+
+  li::marker {
+    color: var(--on-surface-container-high);
+  }
+
+  img {
+    margin: $space-2 0;
+    border-radius: $radius-md;
+  }
+
+}
+
+html[data-theme="dark"] .markdownpostlayout-container img {
+  filter: brightness(80%);
+}
+
+.markdownpostlayout-basic-info {
+  margin-bottom: $space-4;
 }

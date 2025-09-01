@@ -12,7 +12,7 @@ interface ProjectInterface {
 }
 
 interface SocialLinkInterface {
-  name: string,
+  content: string,
   url?: string,
   imgSrc?: string,
 }
@@ -33,7 +33,13 @@ const projects: ProjectInterface[] = [
 
 const socialLinks: SocialLinkInterface[] = [
   {
-    "name": "Github",
+    "content": "Email: roifjcf@gmail.com"
+  },
+  {
+    "content": "Discord: roifjcf"
+  },
+  {
+    "content": "Github",
     "url": "https://github.com/roifjcf"
   }
 ];
@@ -46,27 +52,23 @@ const socialLinks: SocialLinkInterface[] = [
   </header>
   <main class="about-container">
     <section class="about-intro">
-      <p>I'm roifjcf -- a developer(maybe).</p>
+      <p>I'm roifjcf, a... developer?</p>
       <p>
         There's no special meaning of my name,
-        it's just a random string with a length of seven (one of my favourite numbers).
+        it's just a random string of characters I like with a length of seven (one of my favourite numbers).
       </p>
       <p>
-        I like building / creating stuff which can be visualized 
-        through different forms of media except writing (especially literary writing).
-      </p>
-      <p>
-        Programming is one of my ways to share my thoughts and feelings.
-      </p>
-      <p>
-        You may find my creative work elsewhere.
+        I like building / creating stuff which can be visualized. Programming is one of my ways to share my thoughts and feelings. You may find my creative work elsewhere...
       </p>
     </section>
     <section>
       <h2>Social and contact</h2>
       <ul>
         {socialLinks.map(link =>
-        <li><a href={link["url"]} target="_blank">{link["name"]}</a></li> )}
+          <li>
+            {link["url"] ? <a href={link["url"]} target="_blank">{link["content"]}</a> : <p>{link["content"]}</p> }
+          </li>
+        )}
       </ul>
 
     </section>

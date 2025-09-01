@@ -1,18 +1,35 @@
 ---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
 import '../styles/main.scss';
 
 import Navbar from "../components/Navbar.astro";
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
+// const lastModified = dayjs()
+//   .utc(Astro.props.frontmatter.lastModified)
+//   .format("HH:mm:ss DD MMMM YYYY UTC");
+const lastModified = dayjs()
+.utc(Astro.props.frontmatter.lastModified)
+.format("YYYY-MM-DD");
 ---
 <Layout>
   <header>
     <Navbar />
   </header>
   <main class="markdownpostlayout-container">
-    <h1>{frontmatter.title}</h1>
-    <p class="comment">{frontmatter.pubDate.toString().slice(0,10)}</p>
-    <slot />
+    <section class="markdownpostlayout-basic-info">
+      <h1>{frontmatter.title}</h1>
+      <p class="comment">Created: {frontmatter.pubDate.toString().slice(0,10)}</p>
+      <p class="comment">Last modified: {lastModified}</p>
+    </section>
+    <hr>
+    <section>
+      <slot />
+    </section>
   </main>
 </Layout>

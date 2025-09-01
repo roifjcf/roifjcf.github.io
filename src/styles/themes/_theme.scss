@@ -6,19 +6,31 @@
   --on-surface: #000;
   --on-surface-variant: #9a9a9a;
   
-  --on-surface-container: #d6d6d6;
+  --on-surface-container: #dcdcdc;
+  --on-surface-container-high: #adadad;
 
-  --primary: #f5e74e;
+  --primary: #f7e388;
+  // --primary: #f5e74e;
   --on-primary: #000;
+  
+  --secondary: hsl(187, 38%, 50%);
+  // --secondary: #708d9d;
+  --on-secondary: #000;
 }
 
 [data-theme="dark"] {
-  --surface: #000;
+  --surface: #272727;
   --on-surface: #d7d7d7;
   --on-surface-variant: #8a8a8a;
 
   --on-surface-container: #2f2f2f;
+  --on-surface-container-high: #474747;
 
-  --primary: #f5e74e;
+  --primary: #f7e388;
+  // --primary: #f5e74e;
   --on-primary: #000;
+
+  --secondary: #8dc5cc;
+  // --secondary: #70a1bd;
+  --on-secondary: #000;
 }
