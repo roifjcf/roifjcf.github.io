@@ -36,7 +36,7 @@ const { posts } = Astro.props;
 const filteredPosts = posts.filter((post: any) => 
                         post.frontmatter.tags?.includes(tag));
 ---
-<Layout pageTitle={tag}>
+<Layout pageTitle={tag} pageDescription={`All posts that contain the tag ${tag}`}>
   <header>
     <Navbar />
   </header>

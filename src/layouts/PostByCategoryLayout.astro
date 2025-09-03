@@ -7,7 +7,7 @@ import Layout from "./Layout.astro";
 const { allPosts, tags, category } = Astro.props;
 
 ---
-<Layout>
+<Layout pageTitle={`Posts about ${category}`} pageDescription={`Posts about ${category}`}>
   <header>
     <Navbar />
   </header>

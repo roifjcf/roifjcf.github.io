@@ -17,7 +17,7 @@ const lastModified = dayjs()
 .utc(Astro.props.frontmatter.lastModified)
 .format("YYYY-MM-DD");
 ---
-<Layout>
+<Layout pageTitle={frontmatter.title} pageDescription={frontmatter.title} >
   <header>
     <Navbar />
   </header>

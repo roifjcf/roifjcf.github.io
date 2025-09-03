@@ -1,6 +1,8 @@
 ---
 import '../styles/main.scss';
 
+const pageTitle = Astro.props.pageTitle ?? "roifjcf";
+const pageDescription = Astro.props.pageDescription ?? "roifjcf's blog";
 ---
 <!doctype html>
 <html lang="en">
@@ -10,9 +12,14 @@ import '../styles/main.scss';
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="roifjcf" >
     <meta name="keywords" content="roifjcf, blog, tech, web development" >
-    <meta name="description" content="roifjcf's blog" >
-    <title>roifjcf</title>
+    <meta name="description" content={pageDescription} >
 
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+
+    <title>{`${pageTitle} | roifjcf's blog`}</title>
+
+    
 
     <script is:inline>
       (function() {
@@ -25,14 +32,6 @@ import '../styles/main.scss';
         }
       })();
     </script>
-
-    <!-- <script>
-      (() => {
-        const savedTheme = localStorage.getItem("theme") || "light";
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      })();
-    </script> -->
-
 
   </head>
   <body>
