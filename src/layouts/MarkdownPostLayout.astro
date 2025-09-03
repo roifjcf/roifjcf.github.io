@@ -24,8 +24,14 @@ const lastModified = dayjs()
   <main class="markdownpostlayout-container">
     <section class="markdownpostlayout-basic-info">
       <h1>{frontmatter.title}</h1>
-      <p class="comment">Created: {frontmatter.pubDate.toString().slice(0,10)}</p>
-      <p class="comment">Last modified: {lastModified}</p>
+      <span class="comment">Created: {frontmatter.pubDate.toString().slice(0,10)}</span>
+      <span>|</span>
+      <span class="comment">Last modified: {lastModified}</span>
+      {frontmatter.tags.length > 0 &&
+      <ul>
+        <span>Tags</span>
+        {frontmatter.tags.map((tag: string) => <li><a href={`/tags/${tag}`}>{tag}</a></li> )}
+      </ul>}
     </section>
     <hr>
     <section>

@@ -89,7 +89,7 @@ a {
   color: var(--secondary);
   
   &:hover {
-    color: var(--on-secondary);
+    color: var(--on-surface);
   }
 }
 
@@ -122,7 +122,7 @@ code {
 }
 
 hr {
-  margin: $space-8 0;
+  margin: $space-6 0;
   border: none;
   border-top: 1px solid var(--on-surface-container);
 }
@@ -186,3 +186,16 @@ html[data-theme="dark"] .background-image {
   padding: 0;
 }
 
+.blogpostinfo-container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+  
+  span {
+    color: var(--on-surface-variant);
+  }
+}
