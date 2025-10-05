@@ -1,0 +1,31 @@
+---
+
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+---
+
+<Layout>
+  <header>
+    <Navbar />
+  </header>
+  <main>
+
+    <p>Latest posts</p>
+    <ul>
+      {allPosts.map((post: any) =>
+      <li class="blogpostinfo-container border-bottom">
+        <a href={post.url}>{post.frontmatter.title}</a>
+        <span>{post.frontmatter.pubDate.slice(0,10)}</span>
+      </li>)}
+    </ul>
+
+    <!-- <h2>Tags</h2>
+    <ul>
+      {tags.map((tag) => (
+        <li><a href={`/tags/${tag}`}>{tag}</a></li>
+      ))}
+    </ul> -->
+  </main>
+</Layout>

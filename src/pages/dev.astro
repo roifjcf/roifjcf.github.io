@@ -1,0 +1,6 @@
+---
+import PostByCategoryLayout from "../layouts/PostByCategoryLayout.astro";
+const allPosts = Object.values(import.meta.glob(`./posts/dev/*.md`, { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+---
+<PostByCategoryLayout allPosts={allPosts} tags={tags} category="dev" />

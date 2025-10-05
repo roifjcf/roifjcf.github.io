@@ -1,0 +1,68 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+interface SocialLinkInterface {
+  content: string;
+  url?: string;
+  imgSrc?: string;
+}
+
+const socialLinks: SocialLinkInterface[] = [
+  {
+    content: "Email: roifjcf@gmail.com",
+  },
+  {
+    content: "Discord: roifjcf",
+  },
+  {
+    content: "Github (check out my projects!)",
+    url: "https://github.com/roifjcf",
+  },
+];
+---
+
+<Layout pageTitle={`About`}>
+  <header>
+    <Navbar />
+  </header>
+  <main class="about-container">
+    <section class="about-intro">
+      <p>I'm roifjcf, a... developer?</p>
+      <p>
+        There's no special meaning of my name, it's just a random string of
+        characters I like with a length of seven (one of my favourite numbers).
+      </p>
+      <p>
+        I like building / creating stuff which can be visualized. Programming is
+        one of my ways to share my thoughts and feelings. You may find my
+        creative work elsewhere...
+      </p>
+    </section>
+    <section>
+      <h2>Projects and contact</h2>
+      <ul>
+        {
+          socialLinks.map((link) => (
+            <li>
+              {link["url"] ? (
+                <a href={link["url"]} target="_blank">
+                  {link["content"]}
+                </a>
+              ) : (
+                <p>{link["content"]}</p>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+  <!-- background image -->
+  <img
+    class="background-image"
+    src="/avatar-transparent.png"
+    alt="background image"
+    draggable="false"
+  />
+</Layout>

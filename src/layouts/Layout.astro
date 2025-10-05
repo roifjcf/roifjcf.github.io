@@ -1,0 +1,43 @@
+---
+import '../styles/main.scss';
+
+const pageTitle = Astro.props.pageTitle ?? "roifjcf";
+const pageDescription = Astro.props.pageDescription ?? "roifjcf's blog";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="roifjcf" >
+    <meta name="keywords" content="roifjcf, blog, tech, web development" >
+    <meta name="description" content={pageDescription} >
+    <meta name="google-site-verification" content="2T2_NwItqAKWYw18LZDgFpbZpjMLKb3TDZLF-It4OWg" />
+    
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+
+    <title>{`${pageTitle} | roifjcf's blog`}</title>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    
+
+    <script is:inline>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem("theme") || "light";
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        } catch (_) {
+          // fallback if localStorage is not accessible
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+
+  </head>
+  <body>
+    <slot />
+
+    
+  </body>
+</html>

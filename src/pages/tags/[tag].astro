@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+
+export async function getStaticPaths() {
+  const allPosts = Object.values(
+    import.meta.glob('../posts/*/*.md', { eager: true })
+  );
+
+  // Collect only valid tags
+  const uniqueTags = [
+    ...new Set(
+      allPosts
+        .map((post: any) => post.frontmatter.tags ?? []) // default to []
+        .flat()
+        .filter((t: any): t is string => typeof t === "string") // only strings
+    ),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter(
+      (post: any) =>
+        Array.isArray(post.frontmatter.tags) &&
+        post.frontmatter.tags.includes(tag)
+    );
+
+    return {
+      params: { tag }, // always a string now
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post: any) => 
+                        post.frontmatter.tags?.includes(tag));
+---
+<Layout pageTitle={tag} pageDescription={`All posts that contain the tag ${tag}`}>
+  <header>
+    <Navbar />
+  </header>
+  <main>
+    <p>Posts tagged with <code>{tag}</code> </p>
+    <br>
+    <ul>
+      {posts.map((post: any) =>
+      <li class="blogpostinfo-container border-bottom">
+        <a href={post.url}>{post.frontmatter.title}</a>
+        <span>{post.frontmatter.pubDate.slice(0,10)}</span>
+      </li>)}
+    </ul>
+  </main>
+</Layout>
